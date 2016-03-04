@@ -1,24 +1,9 @@
-## README
+## Push it real good!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application is for counting your push ups.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. Run it on your phone.
+2. Sign in/up.
+3. Click the button to push it.
+4. Start doing push ups using your nose to click the button.
+5. Make sure to click the done button when you wrap up.
