@@ -55,7 +55,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'haml'
 gem 'haml-rails'
-gem 'devise', git: 'git@github.com:plataformatec/devise.git'
+gem 'devise', github: 'plataformatec/devise
 gem "therubyracer"
 gem "less-rails"
 gem 'font_assets'
