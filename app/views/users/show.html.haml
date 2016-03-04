@@ -1,0 +1,19 @@
+%h3
+  = "Hey, #{@user.name}!"
+
+= link_to "+ Push it", workouts_path(workout:{user_id: current_user.id, reps: 0}), :method => :post, class: "btn btn-default"
+
+%br
+%br
+%table.table.table-striped
+  %tr
+    %th Date
+    %th Reps
+    %th Completed Time
+    %th
+  - @user.workouts.each do |workout|
+    %tr
+      %td= workout.created_at
+      %td= workout.reps
+      %td= workout.finished_at ? workout.finished_at : "X"
+      %td= link_to "delete", workout_path(workout), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-xs btn-danger'

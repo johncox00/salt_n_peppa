@@ -1,0 +1,18 @@
+- model_class = User
+.page-header
+  %h1 Pusher Uppers
+%table.table.table-striped
+  %thead
+    %tr
+      %th Name
+      %th Total Push Ups
+      %th Total Workouts
+      %th Last Workout
+
+  %tbody
+    - @users.each do |user|
+      %tr
+        %td= link_to user.name, user
+        %td= user.total_reps || 0
+        %td= user.total_workouts || 0
+        %td= user.last_workout

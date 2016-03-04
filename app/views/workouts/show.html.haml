@@ -1,0 +1,25 @@
+
+- if @workout.finished_at
+  %p
+    %strong Reps:
+    %br
+    %span#rep_count
+      = @workout.reps
+  %p
+    %strong Finished at:
+    %br
+    = @workout.finished_at
+  %br
+  %br
+  = link_to "Delete", workout_path(@workout), :method => "delete", :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-danger'
+
+- else
+  .row
+    .col-xs-12
+      %a#rep_incr.btn.btn-default.btn-lg.btn-block{style: "padding: 40% 0; ",data: {workout: @workout.id, reps: @workout.reps}}
+        %span#rep_count
+          = @workout.reps
+        %br
+        ONE MORE!
+  %br
+  = link_to "Aaaaand...DONE", workout_path(@workout, workout:{finished_at: DateTime.now}), :method => :put, class: "btn btn-danger"
