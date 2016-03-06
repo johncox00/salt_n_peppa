@@ -1,5 +1,5 @@
 ready = function(){
-  $("#rep_incr").click(function(){
+  $("#rep_incr").on("touchstart", function(){
     current_count = $("#rep_incr").data("reps");
     current_workout = $("#rep_incr").data("workout");
     current_count++;
