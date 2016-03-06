@@ -1,18 +1,18 @@
 ready = function(){
   $("#rep_incr").on("touchstart", function(){
     current_count = $("#rep_incr").data("reps");
-    current_workout = $("#rep_incr").data("workout");
     current_count++;
     $("#rep_incr").data("reps", current_count);
     $("#rep_count").text(current_count);
-    // $.ajax({
-    //   url: "/workouts/"+current_workout,
-    //   data: {workout: {reps: current_count}},
-    //   method: 'PUT',
-    //   dataType: 'json'
-    // }).done(function() {
-    //   // nothing here
-    // });
+  });
+
+  $("#rep_decr").on("touchstart", function(){
+    current_count = $("#rep_incr").data("reps");
+    if(current_count > 0){
+      current_count--;
+    }
+    $("#rep_incr").data("reps", current_count);
+    $("#rep_count").text(current_count);
   });
 
   $('#workout_submit').click(function(){

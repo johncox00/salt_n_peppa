@@ -24,4 +24,5 @@
   %br
   %a#workout_submit.btn.btn-default.btn-danger
     Aaaaand...DONE
-  /= link_to "Aaaaand...DONE", workout_path(@workout, workout:{finished_at: DateTime.now}), :method => :put, class: "btn btn-danger"
+  %a#rep_decr.btn.btn-default.btn-default.pull-right
+    Oops (-)
